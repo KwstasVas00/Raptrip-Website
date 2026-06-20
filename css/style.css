@@ -491,30 +491,82 @@ body {
 */
 
 
+/* ================= LIVE EVENT COMPACT ================= */
+
 .event-card {
+  max-width: 700px;      /* Πόσο φαρδύ θα είναι */
+  margin: 0 auto;
   display: flex;
   flex-direction: column;
-  gap: 25px;
+  gap: 15px;
+
   background: rgba(255,255,255,0.05);
-  border-radius: var(--radius-lg);
-  padding: 20px;
+  border-radius: 15px;
+  padding: 15px;
+
   border: 1px solid rgba(255,255,255,0.1);
-  transition: var(--transition);
   overflow: hidden;
 }
 
-.event-card:hover {
-  transform: translateY(-10px);
-  border-color: var(--accent);
-  box-shadow: var(--shadow-lg);
+.event-poster {
+  text-align: center;
 }
 
-/* ΑΦΙΣΑ */
 .event-poster img {
   width: 100%;
+  max-width: 550px;      /* Μικρότερη αφίσα */
   height: auto;
-  object-fit: contain;
-  border-radius: 15px;
+  border-radius: 12px;
+}
+
+.event-content h3 {
+  font-size: 1.1rem;
+  margin-bottom: 8px;
+  color: var(--accent);
+}
+
+.event-description {
+  font-size: 0.9rem;
+  line-height: 1.5;
+}
+
+.event-description p {
+  margin-bottom: 8px;
+}
+
+.event-info {
+  margin-top: 10px;
+  gap: 5px;
+}
+
+.event-info p {
+  font-size: 0.9rem;
+}
+
+.instagram-btn {
+  padding: 8px 14px;
+  font-size: 0.9rem;
+}
+
+.event-date {
+  margin-top: 10px;
+}
+
+.event-date a {
+  padding: 10px;
+  font-size: 0.95rem;
+}
+
+.events-grid {
+    display: flex;
+    justify-content: space-between;
+    gap: 30px;
+    align-items: flex-start;
+}
+
+.event-card {
+    width: 48%;
+    margin: 0;
 }
 
 /* CONTENT */
