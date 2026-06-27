@@ -1543,3 +1543,87 @@ footer {
     grid-template-columns: 1fr;
   }
 }
+
+
+/* ========== READ MORE BUTTON ========== */
+.read-more-btn {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  background: linear-gradient(135deg, #ff0000, #ff5500);
+  color: #fff;
+  border: none;
+  border-radius: 25px;
+  padding: 10px 22px;
+  font-size: 14px;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+  cursor: pointer;
+  margin: 12px 0 18px 0;
+  -webkit-tap-highlight-color: transparent;
+  touch-action: manipulation;
+  transition: all 0.25s ease;
+  box-shadow: 0 4px 14px rgba(255, 0, 0, 0.35);
+}
+
+.read-more-btn:active {
+  transform: scale(0.96);
+  box-shadow: 0 2px 8px rgba(255, 0, 0, 0.25);
+}
+
+.read-more-icon {
+  font-size: 12px;
+  transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.collapsible-content {
+  overflow: hidden;
+  transition: max-height 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+
+@media (max-width: 768px) {
+  .events-grid {
+    display: flex !important;
+    flex-direction: column !important;
+    gap: 20px !important;
+    padding: 0 12px !important;
+  }
+
+  .event-card {
+    width: 100% !important;
+    max-width: 100% !important;
+    min-width: unset !important;
+    flex: none !important;
+    grid-column: unset !important;
+  }
+
+  .event-description p,
+  .event-description li,
+  .event-description a {
+    font-size: 13px !important;
+    line-height: 1.5 !important;
+  }
+
+  .event-description h2 {
+    font-size: 14px !important;
+  }
+
+  .event-description strong {
+    font-size: 13px !important;
+  }
+
+  .event-content h3 {
+    font-size: 15px !important;
+    line-height: 1.35 !important;
+  }
+}
+
+
+
+
+
+
+
+
+
