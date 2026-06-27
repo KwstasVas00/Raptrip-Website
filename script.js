@@ -157,3 +157,57 @@ document.addEventListener("DOMContentLoaded", function () {
     setActiveLinkOnScroll();
   }
 });
+
+
+// ========== READ MORE / ΔΙΑΒΑΣΕ ΠΕΡΙΣΣΟΤΕΡΑ ==========
+document.addEventListener("DOMContentLoaded", function () {
+  const descriptions = document.querySelectorAll(".event-description");
+
+  descriptions.forEach(function (desc) {
+    const children = Array.from(desc.children);
+    if (children.length <= 2) return;
+
+    const hiddenItems = children.slice(2);
+
+    const collapsible = document.createElement("div");
+    collapsible.className = "collapsible-content";
+    collapsible.style.maxHeight = "0";
+    collapsible.style.overflow = "hidden";
+    collapsible.style.transition = "max-height 0.5s cubic-bezier(0.4,0,0.2,1)";
+
+    hiddenItems.forEach(function (el) {
+      collapsible.appendChild(el);
+    });
+
+    desc.appendChild(collapsible);
+
+    const btn = document.createElement("button");
+    btn.className = "read-more-btn";
+    btn.innerHTML = '<span class="read-more-text">Διάβασε περισσότερα</span><i class="fas fa-chevron-down read-more-icon"></i>';
+    btn.setAttribute("aria-expanded", "false");
+
+    desc.after(btn);
+
+    btn.addEventListener("click", function () {
+      const isOpen = btn.getAttribute("aria-expanded") === "true";
+
+      if (!isOpen) {
+        collapsible.style.maxHeight = collapsible.scrollHeight + "px";
+        btn.setAttribute("aria-expanded", "true");
+        btn.querySelector(".read-more-text").textContent = "Λιγότερα";
+        btn.querySelector(".read-more-icon").style.transform = "rotate(180deg)";
+      } else {
+        collapsible.style.maxHeight = "0";
+        btn.setAttribute("aria-expanded", "false");
+        btn.querySelector(".read-more-text").textContent = "Διάβασε περισσότερα";
+        btn.querySelector(".read-more-icon").style.transform = "rotate(0deg)";
+
+        setTimeout(function () {
+          btn.closest(".event-card").scrollIntoView({ behavior: "smooth", block: "start" });
+        }, 300);
+      }
+    });
+  });
+});
+
+
