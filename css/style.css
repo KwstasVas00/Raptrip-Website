@@ -1686,7 +1686,7 @@ footer {
 /* ========== LOGO POSITION - ΜΟΝΟ DESKTOP ========== */
 @media (min-width: 993px) {
   .logo {
-    margin-left: -65px;
+    margin-left: -50px;
   }
 }
 
