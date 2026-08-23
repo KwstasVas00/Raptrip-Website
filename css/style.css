@@ -583,7 +583,7 @@ body {
 
 /* DESCRIPTION */
 .event-description {
-  color: #fff;
+  color: #b8b8b8;
   font-weight: 500;
   line-height: 1.6;
 }
@@ -622,12 +622,42 @@ body {
   display: flex;
   gap: 10px;
   align-items: center;
-  color: #fff;
+  color: #b8b8b8;
   font-weight: 600;
 }
 
 .event-info i {
   color: var(--accent);
+}
+
+/* MAP LINK (αντικαθιστά τα γυμνά goo.gl links) */
+.map-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  margin: 2px 0 6px;
+  padding: 4px 12px;
+  border-radius: 20px;
+  background: rgba(255,255,255,0.06);
+  border: 1px solid rgba(255,255,255,0.12);
+  color: #b8b8b8;
+  font-size: 0.82rem;
+  font-weight: 600;
+  text-decoration: none;
+  transition: all 0.25s ease;
+}
+
+.map-link i {
+  color: var(--accent);
+  font-size: 0.85rem;
+}
+
+.map-link:hover {
+  background: rgba(255,255,255,0.14);
+  border-color: rgba(255,255,255,0.25);
+  color: #fff;
+  transform: scale(1.05);
+  cursor: pointer;
 }
 
 /* BUY BUTTON (EVENT DATE) */
@@ -688,6 +718,7 @@ body {
   }
 
 }
+
 
 
 /* ================= TICKETS SECTION ================= */
@@ -1686,7 +1717,7 @@ footer {
 /* ========== LOGO POSITION - ΜΟΝΟ DESKTOP ========== */
 @media (min-width: 993px) {
   .logo {
-    margin-left: -50px;
+    margin-left: -65px;
   }
 }
 
