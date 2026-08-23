@@ -304,58 +304,6 @@ body {
   right: 22%;
 }
 
-/* ================= PARTNERS MARQUEE ================= */
-/*
-.partners-marquee {
-  background: rgb(0, 0, 0);
-  padding: 20px 0;
-  overflow: hidden;
-  position: relative;
-  width: 100%;
-  margin-top: 50px;
-}
-
-.marquee-container {
-  position: relative;
-  overflow: hidden;
-}
-
-.marquee-track {
-  display: flex;
-  width: max-content;
-  animation: marquee-left 40s linear infinite;
-}
-
-.marquee-item {
-  flex-shrink: 0;
-  padding: 0 40px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  transition: var(--transition);
-}
-
-.marquee-item img {
-  height: 70px;
-  opacity: 0.7;
-  transition: var(--transition);
-}
-
-.marquee-item:hover img {
-  opacity: 1;
-  transform: scale(1.1);
-}
-
-@keyframes marquee-left {
-  0% {
-    transform: translateX(0);
-  }
-  100% {
-    transform: translateX(-50%);
-  }
-}
-*/
-
 /* ================= COMMON SECTION STYLES ================= */
 .page-section {
   padding: 100px 20px;
@@ -388,113 +336,10 @@ body {
   font-size: 1.1rem;
 }
 
-/* ================= LIVE EVENTS SECTION ================= */
-
-/* .live-events-section {
-  background: var(--bg-dark);
-}
-
-.events-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-  gap: 30px;
-  margin-top: 50px;
-}
-
-.event-card {
-  background: rgba(255, 255, 255, 0.05);
-  border-radius: var(--radius-lg);
-  padding: 25px;
-  display: flex;
-  gap: 20px;
-  border: 1px solid rgba(255, 255, 255, 0.1);
-  transition: var(--transition);
-}
-
-.event-card:hover {
-  transform: translateY(-10px);
-  border-color: var(--accent);
-  box-shadow: var(--shadow-lg);
-}
-
-.event-date {
-  background: var(--accent);
-  color: var(--text);
-  padding: 15px;
-  border-radius: var(--radius-md);
-  text-align: center;
-  min-width: 70px;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-}
-
-.event-date .day {
-  font-size: 2rem;
-  font-weight: 900;
-  line-height: 1;
-}
-
-.event-date .month {
-  font-size: 1.2rem;
-  font-weight: 600;
-  text-transform: uppercase;
-}
-
-.event-info h3 {
-  color: var(--accent);
-  margin-bottom: 15px;
-  font-size: 1.4rem;
-}
-
-.event-info p {
-  color: var(--text-light);
-  margin-bottom: 10px;
-  display: flex;
-  align-items: center;
-  gap: 10px;
-}
-
-.event-info i {
-  color: var(--accent);
-  width: 20px;
-}
-
-.event-btn {
-  display: inline-block;
-  background: var(--accent);
-  color: var(--text);
-  padding: 12px 25px;
-  border-radius: var(--radius-md);
-  text-decoration: none;
-  font-weight: 600;
-  margin-top: 15px;
-  transition: var(--transition);
-  border: 2px solid var(--accent);
-}
-
-.event-btn:hover {
-  background: transparent;
-  color: var(--accent);
-}
-*/
-/*
-.event-card {
-  display: flex;
-  gap: 25px;
-  background: rgba(255,255,255,0.05);
-  border-radius: var(--radius-lg);
-  padding: 20px;
-  border: 1px solid rgba(255,255,255,0.1);
-  transition: var(--transition);
-}
-*/
-
-
 /* ================= LIVE EVENT COMPACT ================= */
 
 .event-card {
-  max-width: 700px;      /* Πόσο φαρδύ θα είναι */
+  max-width: 700px;
   margin: 0 auto;
   display: flex;
   flex-direction: column;
@@ -514,7 +359,7 @@ body {
 
 .event-poster img {
   width: 100%;
-  max-width: 550px;      /* Μικρότερη αφίσα */
+  max-width: 550px;
   height: auto;
   border-radius: 12px;
 }
@@ -557,15 +402,17 @@ body {
   font-size: 0.95rem;
 }
 
+/* Grid: 3 κάρτες δίπλα-δίπλα με wrap για να μη ξεχειλίζουν */
 .events-grid {
     display: flex;
-    justify-content: space-between;
+    flex-wrap: wrap;
+    justify-content: center;
     gap: 30px;
     align-items: flex-start;
 }
 
 .event-card {
-    width: 48%;
+    width: 31%;
     margin: 0;
 }
 
@@ -720,210 +567,6 @@ body {
 }
 
 
-
-/* ================= TICKETS SECTION ================= */
-/*.tickets-section {
-  background: var(--bg-dark);
-  border-top: 1px solid rgba(255, 255, 255, 0.1);
-}
-
-.tickets-container {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  gap: 30px;
-  margin-top: 50px;
-}
-
-.ticket-card {
-  background: rgba(255, 255, 255, 0.05);
-  border-radius: var(--radius-lg);
-  padding: 30px;
-  border: 1px solid rgba(255, 255, 255, 0.1);
-  transition: var(--transition);
-  position: relative;
-}
-
-.ticket-card.featured {
-  border-color: var(--accent);
-  transform: scale(1.05);
-}
-
-.ticket-card:hover {
-  transform: translateY(-10px);
-  border-color: var(--accent);
-}
-
-.ticket-header {
-  display: flex;
-  justify-content: space-between;
-  align-items: flex-start;
-  margin-bottom: 20px;
-}
-
-.ticket-header h3 {
-  color: var(--accent);
-  font-size: 1.3rem;
-}
-
-.ticket-badge {
-  background: var(--accent);
-  color: var(--text);
-  padding: 5px 10px;
-  border-radius: var(--radius-sm);
-  font-size: 0.8rem;
-  font-weight: 600;
-}
-
-.ticket-price {
-  font-size: 3rem;
-  font-weight: 900;
-  color: var(--text);
-  margin: 20px 0;
-}
-
-.price-note {
-  font-size: 1rem;
-  color: var(--text-light);
-  font-weight: normal;
-}
-
-.ticket-features {
-  list-style: none;
-  margin: 25px 0;
-}
-
-.ticket-features li {
-  margin-bottom: 12px;
-  color: var(--text-light);
-  display: flex;
-  align-items: center;
-  gap: 10px;
-}
-
-.ticket-features i {
-  color: var(--accent);
-}
-
-.buy-btn {
-  width: 100%;
-  background: var(--accent);
-  color: var(--text);
-  border: none;
-  padding: 15px;
-  border-radius: var(--radius-md);
-  font-size: 1.1rem;
-  font-weight: 700;
-  cursor: pointer;
-  transition: var(--transition);
-  text-transform: uppercase;
-  letter-spacing: 1px;
-}
-
-.buy-btn:hover {
-  background: transparent;
-  border: 2px solid var(--accent);
-}
-*/
-
-/* ================= CLOTHING SECTION ================= */
-/*
-.clothing-section {
-  background: var(--bg-dark);
-  border-top: 1px solid rgba(255, 255, 255, 0.1);
-}
-
-.clothing-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
-  gap: 30px;
-  margin-top: 50px;
-}
-
-.product-card {
-  background: rgba(255, 255, 255, 0.05);
-  border-radius: var(--radius-lg);
-  overflow: hidden;
-  transition: var(--transition);
-  border: 1px solid rgba(255, 255, 255, 0.1);
-}
-
-.product-card:hover {
-  transform: translateY(-10px);
-  border-color: var(--accent);
-  box-shadow: var(--shadow-lg);
-}
-
-.product-image {
-  position: relative;
-  height: 250px;
-  overflow: hidden;
-}
-
-.product-image img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  transition: var(--transition);
-}
-
-.product-card:hover .product-image img {
-  transform: scale(1.05);
-}
-
-.product-badge {
-  position: absolute;
-  top: 15px;
-  right: 15px;
-  background: var(--accent);
-  color: var(--text);
-  padding: 5px 10px;
-  border-radius: var(--radius-sm);
-  font-size: 0.8rem;
-  font-weight: 600;
-}
-
-.product-info {
-  padding: 20px;
-}
-
-.product-info h3 {
-  color: var(--text);
-  margin-bottom: 10px;
-  font-size: 1.2rem;
-}
-
-.product-desc {
-  color: var(--text-light);
-  font-size: 0.9rem;
-  margin-bottom: 15px;
-  min-height: 60px;
-}
-
-.product-price {
-  color: var(--accent);
-  font-size: 1.5rem;
-  font-weight: 700;
-  margin-bottom: 15px;
-}
-
-.add-to-cart {
-  width: 100%;
-  background: var(--accent);
-  color: var(--text);
-  border: none;
-  padding: 12px;
-  border-radius: var(--radius-md);
-  font-weight: 600;
-  cursor: pointer;
-  transition: var(--transition);
-}
-
-.add-to-cart:hover {
-  background: transparent;
-  border: 2px solid var(--accent);
-}
-
-*/
 /* ================= ABOUT SECTION ================= */
 .about-section {
   background: var(--bg-dark);
@@ -1407,7 +1050,6 @@ footer {
 }
 
 /* ================= RESPONSIVE DESIGN ================= */
-/* ================= RESPONSIVE DESIGN ================= */
 @media (max-width: 1200px) {
   .slogan {
     right: 100px;
@@ -1482,6 +1124,11 @@ footer {
 
   .ticket-card.featured {
     transform: scale(1);
+  }
+
+  /* Κάτω από 992px οι 3 κάρτες πάνε σε 2 ανά σειρά */
+  .event-card {
+    width: 47%;
   }
 }
 
@@ -1636,7 +1283,8 @@ footer {
     line-height: 1.5 !important;
   }
 
-  .event-description h2 {
+  .event-description h2,
+  .event-description h3 {
     font-size: 14px !important;
   }
 
@@ -1720,6 +1368,5 @@ footer {
     margin-left: -65px;
   }
 }
-
 
 
